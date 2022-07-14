@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  node:
+    build: ./
+    ports:
+    #  - 3000:3000
+      - 4000:4000
+      - 5555:5555
+    stdin_open: true
+    volumes:
+      - .:/node
+    #   - ./dev/aws/:/root/.aws/
+    #   - ./dev/amplify:/root/.amplify/
+    tty: true
